@@ -11,6 +11,19 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^9.4.1",
-    "wait-on": "^6.0.0"
+    "wait-on": "^6.0.0",
+    "cypress-multi-reporters": "^1.5.0",
+    "mocha": "^8.4.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cy:run": "ELECTRON_EXTRA_LAUNCH_ARGS=--js-flags=--expose_gc npx cypress run --browser chrome --headless",
+    "cy:open": "npx cypress open",
+    "cy:verify": "npx cypress verify",
+    "cy:report": "npx mochawesome-merge automation-results/reports/*.json > automation-results/reports/martech_automation_report.json && npx marge automation-results/reports/martech_automation_report.json --reportDir ./automation-results",
+    "cy:cleanup": "rm -rf cypress/automation-results"
   }
 }
