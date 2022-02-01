@@ -5,6 +5,11 @@
   "video": false,
   "reporter": "mochawesome",
   "reporterOptions": {
-    "configFile": "reporter-config.json"
+    "reportDir": "automation-results/reports",
+    "reportFilename": "index",
+    "overwrite": false,
+    "html": false,
+    "json": true,
+    "charts": true
   }
 }
