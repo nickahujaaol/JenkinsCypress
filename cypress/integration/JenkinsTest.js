@@ -3,7 +3,7 @@ describe('Test local spring boot application', () => {
         cy.request({
             url: 'localhost:8090'
           }).then((resp) => {
-            expect(resp.status).to.eq(200);
+            expect(resp.status).to.eq(300);
           });
     })
   })
