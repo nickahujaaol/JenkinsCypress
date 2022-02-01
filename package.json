@@ -23,7 +23,7 @@
     "cy:run": "ELECTRON_EXTRA_LAUNCH_ARGS=--js-flags=--expose_gc npx cypress run --browser chrome --headless",
     "cy:open": "npx cypress open",
     "cy:verify": "npx cypress verify",
-    "cy:report": "npx mochawesome-merge automation-results/reports/*.json > automation-results/reports/martech_automation_report.json && npx marge automation-results/reports/martech_automation_report.json --reportDir ./automation-results",
-    "cy:cleanup": "rm -rf cypress/automation-results"
+    "cy:report": "npx mochawesome-merge ./automation-results/reports/*.json > ./automation-results/reports/martech_automation_report.json && npx marge ./automation-results/reports/martech_automation_report.json --reportDir ./automation-results",
+    "cy:cleanup": "rm -rf ./automation-results"
   }
 }
